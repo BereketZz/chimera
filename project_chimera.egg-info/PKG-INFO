@@ -1,0 +1,10 @@
+Metadata-Version: 2.4
+Name: project-chimera
+Version: 0.1.0
+Summary: Autonomous Influencer Network using MCP and Swarm Architecture
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+Requires-Dist: mcp>=1.26.0
+Requires-Dist: pydantic>=2.12.5
+Requires-Dist: redis>=7.1.0
+Requires-Dist: weaviate-client>=4.19.2
