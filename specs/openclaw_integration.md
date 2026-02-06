@@ -1,16 +1,17 @@
-# Project Chimera - Master Specification
+# OpenClaw Integration Plan
 
-## Vision
-Project Chimera aims to deploy autonomous influencer agents capable of perception, reasoning, and content creation at scale. Agents operate within a centralized Orchestrator while maintaining significant autonomy.
+Project Chimera will expose agent availability and operational status to the OpenClaw network.
 
-## Strategic Objectives
-- Enable 24/7 digital influencer activity.
-- Support multi-platform content publishing (Twitter, Instagram, Threads).
-- Integrate autonomous economic actions via Coinbase AgentKit.
-- Ensure ethical and brand-compliant behavior through HITL and Judging layers.
+## Availability Signals
+- agent_id
+- supported_skills
+- current_load
+- health_status
 
-## Constraints
-- Must adhere to MCP standard for external interactions.
-- Support scalable agent swarms (>= 1000 concurrent agents).
-- Data isolation between tenants.
-- All financial operations must be controlled by configurable budget policies.
+## Publishing Mechanism
+- Status is published via MCP-compatible OpenClaw endpoints.
+- Agents do not directly interact with OpenClaw; the Orchestrator mediates all communication.
+
+## Governance
+- Only approved agents may publish availability.
+- No private memory or credentials are exposed.
