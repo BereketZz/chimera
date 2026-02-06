@@ -1,0 +1,46 @@
+# Project Chimera — AI Agent Rules
+
+## Project Context
+This is **Project Chimera**, an autonomous influencer system.
+Chimera consists of multiple AI agents operating in a coordinated swarm to:
+- Fetch trends and signals from the web
+- Generate and evaluate content
+- Publish to social platforms via MCP tools
+- Track memory, performance, and economic activity
+
+All development decisions must align with this vision.
+
+---
+
+## Prime Directive
+**NEVER generate code without first checking the `specs/` directory.**
+
+If specifications are missing, incomplete, or unclear:
+- STOP
+- Explain what is missing
+- Propose updates to the specs before writing any code
+
+---
+
+## Traceability Requirement
+Before writing any code or configuration:
+1. Explain your understanding of the task
+2. Outline a clear plan of action
+3. Reference relevant files in `specs/`
+
+Only proceed to code after the plan is approved.
+
+---
+
+## Behavioral Constraints
+- Prefer clarity over cleverness
+- Do not invent APIs, schemas, or agent behavior not defined in specs
+- Assume this is a production-grade system, not a prototype
+- When uncertain, ask for clarification instead of guessing
+
+---
+
+## Architectural Bias
+- Favor Planner–Worker–Judge or Orchestrator–Agent patterns
+- Assume MCP tools are the primary interface to external systems
+- Design for scalability, observability, and human-in-the-loop control
