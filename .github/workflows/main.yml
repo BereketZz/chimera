@@ -1,0 +1,48 @@
+name: Chimera CI/CD
+
+# Run this workflow on every push or pull request to main
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+
+    steps:
+      # 1. Checkout the repo
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      # 2. Set up Python
+      - name: Set up Python 3.12
+        uses: actions/setup-python@v5
+        with:
+          python-version: 3.12
+
+      # 3. Install dependencies
+      - name: Install dependencies
+        run: |
+          python -m venv venv
+          source venv/bin/activate
+          pip install --upgrade pip
+          pip install -r requirements.txt
+          pip install pytest
+
+      # 4. Run your tests via Makefile
+      - name: Run tests
+        run: make test
+
+      # 5. Optional: linting/spec checks
+      - name: Spec check
+        run: make spec-check || echo "Spec check skipped"
+
+      # 6. Upload test results (optional)
+      - name: Upload pytest results
+        if: always()
+        uses: actions/upload-artifact@v3
+        with:
+          name: pytest-results
+          path: tests/*.xml
