@@ -1,0 +1,6 @@
+{
+  "status": "success|failure|pending",
+  "post_id": "string",
+  "timestamp": "string",
+  "error_message": "string (optional)"
+}

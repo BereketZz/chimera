@@ -1,0 +1,10 @@
+{
+  "trends": [
+    {
+      "title": "string",
+      "url": "string",
+      "score": "float (0.0 - 1.0)"
+    }
+  ],
+  "retrieved_at": "timestamp"
+}

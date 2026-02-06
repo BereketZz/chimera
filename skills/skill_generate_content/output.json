@@ -1,0 +1,5 @@
+{
+  "text_content": "string",
+  "media_urls": ["string"],
+  "confidence_score": "float (0.0 - 1.0)"
+}
